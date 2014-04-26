@@ -1,7 +1,5 @@
-
 ### 1.Merges the training and the test sets to create one data set
 getwd()  
-setwd("C:/Users/.s/Desktop/Big Data/Data Science/Getting & Cleaning Data/2nd Week/UCI HAR Dataset/train")    
 X_train <- read.table("X_train.txt", header =F, sep="")
 str(X_train)
 Y_train <- read.table("y_train.txt", header =F, sep="")
@@ -12,7 +10,6 @@ SXY_train <- cbind(Subject_train, X_train, Y_train)
 str(SXY_train)
 
 getwd()
-setwd("C:/Users/.s/Desktop/Big Data/Data Science/Getting & Cleaning Data/2nd Week/UCI HAR Dataset/test")
 X_test <- read.table("X_test.txt", header =F, sep="")
 Y_test <- read.table("y_test.txt", header =F, sep="")
 Subject_test <- read.table("subject_test.txt", header =F, sep="")
@@ -30,7 +27,6 @@ str(SXY_TrainTest)      #SXY_TrainTest is the dataset that merges both the train
 ### 2.Extracts only the measurements on the mean and standard deviation for each measurement
 names(SXY_TrainTest)
 getwd()
-setwd("C:/Users/.s/Desktop/Big Data/Data Science/Getting & Cleaning Data/2nd Week/UCI HAR Dataset")
 Feature <- read.table("features.txt", header=F, sep="")
 str(Feature)
 head(Feature)
